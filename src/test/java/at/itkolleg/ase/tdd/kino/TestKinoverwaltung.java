@@ -15,10 +15,12 @@ import static org.junit.jupiter.api.Assertions.*;
 @ExtendWith(MockitoExtension.class)
 public class TestKinoverwaltung {
 
-    @Mock
+
     private KinoSaal kinoSaal;
     private Vorstellung vorstellung;
     private KinoVerwaltung kinoVerwaltung;
+
+
 
     @BeforeEach
     void setup(){
@@ -29,8 +31,19 @@ public class TestKinoverwaltung {
         map.put('D', 22);
         kinoSaal = new KinoSaal("Kinosaal 1" ,map);
         vorstellung = new Vorstellung(kinoSaal, Zeitfenster.ABEND , LocalDate.now(), "The Avengers", 20f);
-        kinoVerwaltung = new KinoVerwaltung();
+        kinoVerwaltung = new KinoVerwaltung(); // fragen wegen test constructor
 
+    }
+
+    @Test
+    void kinoVerwaltungConstructor(){
+        boolean thrown = false;
+        try{
+            KinoVerwaltung k = new KinoVerwaltung();
+        }catch(Exception e){
+            thrown = true;
+        }
+        assertFalse(thrown);
     }
 
     @Test

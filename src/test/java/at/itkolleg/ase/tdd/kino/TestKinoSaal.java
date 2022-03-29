@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.HashMap;
@@ -16,8 +17,9 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @ExtendWith(MockitoExtension.class)
 public class TestKinoSaal {
 
-    @Mock
+
     private KinoSaal kinosaal;
+    private Map<Character, Integer> map;
 
     @BeforeEach
     void setup(){
@@ -30,9 +32,26 @@ public class TestKinoSaal {
     }
 
     @Test
+    void KinoSaalConstructor(){
+        boolean thrown = false;
+        try{
+            KinoSaal k = new KinoSaal("Kinosaal 1" ,map);
+        }catch(Exception e){
+            thrown = true;
+        }
+        assertFalse(thrown);
+    }
+
+    @Test
     void getName(){
         assertEquals("Kinosaal 1", kinosaal.getName());
     }
+
+//    @Test
+//    void testsmth(){
+//        Mockito.when(Object.getNumber()).thenReturn(5);
+//        assertEquals(8, Object.increment());
+//    }
 
     @Test
     void testPlaetze(){

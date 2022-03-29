@@ -11,13 +11,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 @ExtendWith(MockitoExtension.class)
 public class TestVorstellung {
 
-    @Mock
+
     private KinoSaal kinoSaal;
     private Vorstellung vorstellung;
+
 
     @BeforeEach
     void setup(){
@@ -28,6 +30,17 @@ public class TestVorstellung {
         map.put('D', 22);
         kinoSaal = new KinoSaal("Kinosaal 1" ,map);
         vorstellung = new Vorstellung(kinoSaal, Zeitfenster.ABEND ,LocalDate.of(2022, 3, 28), "The Avengers", 20f);
+    }
+
+    @Test
+    void VorstellungConstructor(){
+        boolean thrown = false;
+        try{
+            Vorstellung v = new Vorstellung(kinoSaal, Zeitfenster.ABEND ,LocalDate.of(2022, 3, 28), "The Avengers", 20f);
+        }catch(Exception e){
+            thrown = true;
+        }
+        assertFalse(thrown);
     }
 
     @Test
