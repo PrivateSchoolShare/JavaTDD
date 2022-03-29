@@ -31,7 +31,7 @@ Arbeite dich in die Theorie zum Thema Testen bzw. Test-Driven-Development (TDD) 
     - Unter Zielumgebung und echten Einsatzbedingungen. Tests auf erwartung des Anwewnders/Kunden
 - Testpyramide
 
-![](RackMultipart20220329-4-b5txds_html_bf99eb310eefb2eb.png)
+![image](https://user-images.githubusercontent.com/46607383/160693479-0613ee19-5d9c-4f1b-b370-36f8dc85cdf4.png)
 
   - Eine Regel über tests sozusagen
   - Bei Unit tests ganz viele machen, weil es dort gut geht und der Aufwand und die Ausführungsdauer sehr gering ist.
