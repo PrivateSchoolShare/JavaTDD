@@ -1,4 +1,5 @@
 # ÜbunGszettel TDD
+<!-- - [x] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/) -->
 
 # Aufgabe 1: Theorie
 
@@ -42,6 +43,7 @@ Arbeite dich in die Theorie zum Thema Testen bzw. Test-Driven-Development (TDD) 
   - Mockito is a mocking framework, JAVA-based library that is used for effective unit testing of JAVA applications. Mockito is used to mock interfaces so that a dummy functionality can be added to a mock interface that can be used in unit testing.
 
 # Aufgabe 2: Ausgangsprojekt
+- [x] Finished
 
 Laden Sie sich das gegebene Maven-Ausgangsprojekt („TDD Kino Demo&quot;, siehe Moodle) herunter. Laden Sie es als Maven-Projekt in ihre IDE und schauen Sie sich an, wie das Projekt aufgebaut ist:
 
@@ -52,6 +54,7 @@ Laden Sie sich das gegebene Maven-Ausgangsprojekt („TDD Kino Demo&quot;, siehe
 Starten Sie den Test AppTest über den grünen Pfeil und versichern Sie sich, dass alles korrekt läuft. Starten Sie auch die App (main-Methode).
 
 # Aufgabe 3: Einarbeitung in den gegebenen Code
+- [x] Finished
 
 Arbeiten Sie sich in den gegebenen Code zur Kinoverwaltung ein. Verwenden Sie die gegebenen Klassen KinoSaal, Ticket, Vorstellung, Kinoverwaltung in der App-Klasse (main-Methode), um ein Gefühl für die Funktionsweise des Programms zu bekommen. Führen Sie folgende Punkte durch:
 
@@ -62,14 +65,17 @@ Arbeiten Sie sich in den gegebenen Code zur Kinoverwaltung ein. Verwenden Sie di
 - etc.
 
 # Aufgabe 4: JUNIT-Tests für KinoSaal
+- [x] Finished
 
 Testen Sie alle Methoden der Klasse KinoSaal (Testklasse TestKinoSaal). check
 
 # Aufgabe 5: JUNIT-Tests für Vorstellung
+- [x] Finished
 
 Testen Sie alle Methoden der Klasse Vorstellung (Testklasse TestVorstellung). check
 
 # Aufgabe 6: JUNIT-Tests für KinoVerwaltung
+- [x] Finished
 
 Testen Sie alle Methoden der Klasse KinoVerwaltung (Testklasse TestKinoverwaltung). check
 
