@@ -1,92 +1,88 @@
-# tdd-kino
+# ÜbunGszettel TDD
 
-part of "advanced software engineering" course at IT Kolleg Imst. Initial project structure with basic source code to learn unit testing (topic area TDD).
+# Aufgabe 1: Theorie
 
-## Getting started
+Arbeite dich in die Theorie zum Thema Testen bzw. Test-Driven-Development (TDD) ein. Nutze dazu die Materialien aus den verschiedenen „Input&quot; Abschnitten im Themenbereich „Test-Driven Development&quot; unseres Moodle-Kurses (https://moodle.tsn.at/course/view.php?id=24763#section-8). Nach dieser Aufgabe musst du folgende Punkte erklären können:
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+- Testdriven Development
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+    - Ein vorgehen, welches den Output definiert und den Code danach testet. Sollte der Output falsch sein wird der code so lange umgeschrieben bis das richtige testresultat herauskommt
+- Red-Green-Refactor
+  - Man schreibt zuerst einen Test der mit 100%iger Wahrscheinlichkeit fehlschlägt.
+  - Dann sorgt man dafür, dass der Tests erfolgreich wird indem man den code umschreibt
+  - Dann reefractored man den Code, macht ihn schneller etc und bei der nächsten Aufgabe genau das Gleiche neuer test der failed code umschreiben bis er passed und dann optimieren usw…
 
-## Add your files
+![](RackMultipart20220329-4-b5txds_html_dfe85e2529670303.png)
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+- FIRST-Acronym
+  -
+- Kent Beck (welche Rolle spielt er in Bezug auf TDD)
+  - Er gilt als Erfinder von SUnit das dann zu JUnit wurde. Also sozusagen der Vater des TDD
+- Testarten
+  - Unit-Tests (Sociable, Solitary, Mocks)
+    - Modul/Komponententests tests eines isolierten Programmbausteines also zum Beispiel einer Klasse oder Methode
+  - Integrationstests
+    - Test des korrekten Zusammenspiels mehrerer Programmbausteine die jeweils unit tests unterzogen wurden
+  - UI-Tests / End-To-End Tests / Systemtests
+    - Test auf Funktionsfähigkeit des gesamten Systems entsprecheend der Anforderung, reiner Black-Box-Test, zusätzliche Tests wwie Performance Robustheit etc…
+  - Akzeptanztests
+    - Unter Zielumgebung und echten Einsatzbedingungen. Tests auf erwartung des Anwewnders/Kunden
+- Testpyramide
 
-```
-cd existing_repo
-git remote add origin https://gitlab.com/itk-imst-pos1se/tdd-kino.git
-git branch -M main
-git push -uf origin main
-```
+![](RackMultipart20220329-4-b5txds_html_bf99eb310eefb2eb.png)
 
-## Integrate with your tools
+  - Eine Regel über tests sozusagen
+  - Bei Unit tests ganz viele machen, weil es dort gut geht und der Aufwand und die Ausführungsdauer sehr gering ist.
+  - Und bei Akzeptanztests weniger tests, da es sehr aufwendig ist und eine hohe Ausführungsdauer hat
+- JUNIT (Junit5)
+  - JUnit is a Java unit testing framework that&#39;s one of the best test methods for regression testing. An open-source framework, it is used to write and run repeatable automated tests.
+- Mockito (Sinn und Funktionsweise von Mocking-Bibliotheken)
+  - Mockito is a mocking framework, JAVA-based library that is used for effective unit testing of JAVA applications. Mockito is used to mock interfaces so that a dummy functionality can be added to a mock interface that can be used in unit testing.
 
-- [ ] [Set up project integrations](https://gitlab.com/itk-imst-pos1se/tdd-kino/-/settings/integrations)
+# Aufgabe 2: Ausgangsprojekt
 
-## Collaborate with your team
+Laden Sie sich das gegebene Maven-Ausgangsprojekt („TDD Kino Demo&quot;, siehe Moodle) herunter. Laden Sie es als Maven-Projekt in ihre IDE und schauen Sie sich an, wie das Projekt aufgebaut ist:
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+- pom.xml (Dependencies, Java-Version etc.)
+- Gegebene Domänen-Klassen (Kinosaal, Ticket etc.)
+- Gegebene Start-Junit5-Tests in test /java/at.itkolleg/AppTest
 
-## Test and Deploy
+Starten Sie den Test AppTest über den grünen Pfeil und versichern Sie sich, dass alles korrekt läuft. Starten Sie auch die App (main-Methode).
 
-Use the built-in continuous integration in GitLab.
+# Aufgabe 3: Einarbeitung in den gegebenen Code
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+Arbeiten Sie sich in den gegebenen Code zur Kinoverwaltung ein. Verwenden Sie die gegebenen Klassen KinoSaal, Ticket, Vorstellung, Kinoverwaltung in der App-Klasse (main-Methode), um ein Gefühl für die Funktionsweise des Programms zu bekommen. Führen Sie folgende Punkte durch:
 
-***
+- Kinosäle anlegen check
+- Vorstellungen anlegen check
+- Vorstellungen über die Kinoverwaltung einplanen check
+- Tickets für Vorstellungen ausgeben
+- etc.
 
-# Editing this README
+# Aufgabe 4: JUNIT-Tests für KinoSaal
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!).  Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
+Testen Sie alle Methoden der Klasse KinoSaal (Testklasse TestKinoSaal). check
 
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+# Aufgabe 5: JUNIT-Tests für Vorstellung
 
-## Name
-Choose a self-explaining name for your project.
+Testen Sie alle Methoden der Klasse Vorstellung (Testklasse TestVorstellung). check
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+# Aufgabe 6: JUNIT-Tests für KinoVerwaltung
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+Testen Sie alle Methoden der Klasse KinoVerwaltung (Testklasse TestKinoverwaltung). check
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+# Aufgabe 7: JUNIT-Tests Advanced
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+Falls nicht schon in den vorhergehenden Aufgaben passiert, testen Sie folgende Punkte unter Verwendung der fortgeschrittenen Features von JUNIT 5:
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+1. Schreiben Sie einen Test, der validiert, dass das Anlegen einer Vorstellung korrekt funktioniert. Der Test sollte eine fachliche Bezeichnung haben und die Assertions sollten bei Validierungsfehler eine Hinweistext liefern.
+2. Schreiben Sie einen Test, der validiert, dass das Einplanen mehrerer Vorstellungen korrekt funktioniert. Stellen Sie zudem sicher, dass beim möglichen Auftreten eines Fehlers trotzdem alle Validierungen ausgeführt werden.
+3. Schreiben Sie einen Test, der sicherstellt, dass ein Fehler geworfen wird, wenn eine Veranstaltung doppelt eingeplant wird.
+4. Schreiben Sie einen parametrisierten Test, der mehrere Ticketkäufe mit unterschiedlichen Parametern überprüft.
+5. Schreiben Sie eine dynamische TestFactory die den Ticketkauf mit zufälligen Werten bombardiert. Der Test soll sicherstellen, dass der Ticketkauf entweder funktioniert oder nur einen der definierten Fehlermeldungen (z.B. new IllegalArgumentException(&quot;Nicht ausreichend Geld.&quot;)) ausgibt. Die Tests müssen reproduzierbar sein.
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+# Aufgabe 8: Mockito Einführung
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+Lesen Sie sich in das Mocking-Framework Mockito ein (Links siehe Moodle im Abschitt „Input zu Mockito&quot;).
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+Verwenden Sie die wesentlichen Mockito-Möglichkeiten praktisch in kleinen Programmen.
