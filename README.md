@@ -12,7 +12,9 @@ Arbeite dich in die Theorie zum Thema Testen bzw. Test-Driven-Development (TDD) 
   - Dann sorgt man dafür, dass der Tests erfolgreich wird indem man den code umschreibt
   - Dann reefractored man den Code, macht ihn schneller etc und bei der nächsten Aufgabe genau das Gleiche neuer test der failed code umschreiben bis er passed und dann optimieren usw…
 
-![](RackMultipart20220329-4-b5txds_html_dfe85e2529670303.png)
+
+![download](https://user-images.githubusercontent.com/46607383/160693290-8266ba07-9cac-406f-bd53-1fd09e77c4a0.png)
+
 
 - FIRST-Acronym
   -
@@ -86,3 +88,4 @@ Falls nicht schon in den vorhergehenden Aufgaben passiert, testen Sie folgende P
 Lesen Sie sich in das Mocking-Framework Mockito ein (Links siehe Moodle im Abschitt „Input zu Mockito&quot;).
 
 Verwenden Sie die wesentlichen Mockito-Möglichkeiten praktisch in kleinen Programmen.
+
