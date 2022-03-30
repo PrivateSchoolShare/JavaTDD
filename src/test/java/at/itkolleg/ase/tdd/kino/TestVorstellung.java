@@ -10,8 +10,7 @@ import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(MockitoExtension.class)
 public class TestVorstellung {
@@ -40,7 +39,11 @@ public class TestVorstellung {
         }catch(Exception e){
             thrown = true;
         }
-        assertFalse(thrown);
+        try{
+            assertFalse(thrown);
+        }catch(Exception e){
+            System.out.println("Vorstellung konnte nicht angelegt werden");
+        }
     }
 
     @Test
@@ -65,11 +68,28 @@ public class TestVorstellung {
 
     @Test
     void kaufeTicket(){
+        // Ein Ticket kaufen
         Ticket ticket = vorstellung.kaufeTicket('D', 22, 20f);
         assertEquals(kinoSaal.getName(), ticket.getSaal());
         assertEquals(22, ticket.getPlatz());
         assertEquals('D', ticket.getReihe());
         assertEquals(Zeitfenster.ABEND, ticket.getZeitfenster());
+
+        //Mehrere Tickets kaufen
+        try{
+            Ticket t1 = vorstellung.kaufeTicket('A', 10, 20f);
+            Ticket t2 = vorstellung.kaufeTicket('B', 13, 20f);
+            Ticket t3 = vorstellung.kaufeTicket('C', 15, 20f);
+
+            assertEquals('A', t1.getReihe());
+            assertEquals('B', t2.getReihe());
+            assertEquals('C', t3.getReihe());
+        }catch (Exception e){
+            // System.out.println("Fehler");
+            fail("Fehler beim kaufen von Tickets");
+        }
+
+
     }
 
 }
