@@ -1,12 +1,11 @@
-# ÜbunGszettel TDD
+# Übungszettel TDD
 <!-- - [x] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/) -->
 
-# Aufgabe 1: Theorie
+# Aufgabe 1: Theorie - ✅
 
 Arbeite dich in die Theorie zum Thema Testen bzw. Test-Driven-Development (TDD) ein. Nutze dazu die Materialien aus den verschiedenen „Input&quot; Abschnitten im Themenbereich „Test-Driven Development&quot; unseres Moodle-Kurses (https://moodle.tsn.at/course/view.php?id=24763#section-8). Nach dieser Aufgabe musst du folgende Punkte erklären können:
 
 - Testdriven Development
-
     - Ein vorgehen, welches den Output definiert und den Code danach testet. Sollte der Output falsch sein wird der code so lange umgeschrieben bis das richtige testresultat herauskommt
 - Red-Green-Refactor
   - Man schreibt zuerst einen Test der mit 100%iger Wahrscheinlichkeit fehlschlägt.
@@ -42,8 +41,7 @@ Arbeite dich in die Theorie zum Thema Testen bzw. Test-Driven-Development (TDD) 
 - Mockito (Sinn und Funktionsweise von Mocking-Bibliotheken)
   - Mockito is a mocking framework, JAVA-based library that is used for effective unit testing of JAVA applications. Mockito is used to mock interfaces so that a dummy functionality can be added to a mock interface that can be used in unit testing.
 
-# Aufgabe 2: Ausgangsprojekt
-- [x] Finished
+# Aufgabe 2: Ausgangsprojekt - ✅
 
 Laden Sie sich das gegebene Maven-Ausgangsprojekt („TDD Kino Demo&quot;, siehe Moodle) herunter. Laden Sie es als Maven-Projekt in ihre IDE und schauen Sie sich an, wie das Projekt aufgebaut ist:
 
@@ -53,8 +51,7 @@ Laden Sie sich das gegebene Maven-Ausgangsprojekt („TDD Kino Demo&quot;, siehe
 
 Starten Sie den Test AppTest über den grünen Pfeil und versichern Sie sich, dass alles korrekt läuft. Starten Sie auch die App (main-Methode).
 
-# Aufgabe 3: Einarbeitung in den gegebenen Code
-- [x] Finished
+# Aufgabe 3: Einarbeitung in den gegebenen Code - ✅
 
 Arbeiten Sie sich in den gegebenen Code zur Kinoverwaltung ein. Verwenden Sie die gegebenen Klassen KinoSaal, Ticket, Vorstellung, Kinoverwaltung in der App-Klasse (main-Methode), um ein Gefühl für die Funktionsweise des Programms zu bekommen. Führen Sie folgende Punkte durch:
 
@@ -64,22 +61,20 @@ Arbeiten Sie sich in den gegebenen Code zur Kinoverwaltung ein. Verwenden Sie di
 - Tickets für Vorstellungen ausgeben
 - etc.
 
-# Aufgabe 4: JUNIT-Tests für KinoSaal
-- [x] Finished
+# Aufgabe 4: JUNIT-Tests für KinoSaal - ✅
 
 Testen Sie alle Methoden der Klasse KinoSaal (Testklasse TestKinoSaal). check
 
-# Aufgabe 5: JUNIT-Tests für Vorstellung
-- [x] Finished
+# Aufgabe 5: JUNIT-Tests für Vorstellung - ✅
 
 Testen Sie alle Methoden der Klasse Vorstellung (Testklasse TestVorstellung). check
 
-# Aufgabe 6: JUNIT-Tests für KinoVerwaltung
-- [x] Finished
+# Aufgabe 6: JUNIT-Tests für KinoVerwaltung - ✅
 
 Testen Sie alle Methoden der Klasse KinoVerwaltung (Testklasse TestKinoverwaltung). check
 
-# Aufgabe 7: JUNIT-Tests Advanced
+# Aufgabe 7: JUNIT-Tests Advanced - ⬜
+
 
 Falls nicht schon in den vorhergehenden Aufgaben passiert, testen Sie folgende Punkte unter Verwendung der fortgeschrittenen Features von JUNIT 5:
 
@@ -89,7 +84,7 @@ Falls nicht schon in den vorhergehenden Aufgaben passiert, testen Sie folgende P
 4. Schreiben Sie einen parametrisierten Test, der mehrere Ticketkäufe mit unterschiedlichen Parametern überprüft.
 5. Schreiben Sie eine dynamische TestFactory die den Ticketkauf mit zufälligen Werten bombardiert. Der Test soll sicherstellen, dass der Ticketkauf entweder funktioniert oder nur einen der definierten Fehlermeldungen (z.B. new IllegalArgumentException(&quot;Nicht ausreichend Geld.&quot;)) ausgibt. Die Tests müssen reproduzierbar sein.
 
-# Aufgabe 8: Mockito Einführung
+# Aufgabe 8: Mockito Einführung - ⬜
 
 Lesen Sie sich in das Mocking-Framework Mockito ein (Links siehe Moodle im Abschitt „Input zu Mockito&quot;).
 
