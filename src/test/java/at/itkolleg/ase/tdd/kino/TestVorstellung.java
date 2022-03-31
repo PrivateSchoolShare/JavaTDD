@@ -92,4 +92,9 @@ public class TestVorstellung {
 
     }
 
+    @Test
+    void testFactoryTicketkauf(){
+
+    }
+
 }

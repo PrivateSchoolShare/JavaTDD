@@ -8,6 +8,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.time.LocalDate;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -68,22 +69,10 @@ public class TestKinoverwaltung {
         }
 
         assertFalse(thrown);
-
-        // mehrere Vorstellungen einplanen
-        Vorstellung v1 = new Vorstellung(kinoSaal, Zeitfenster.ABEND , LocalDate.of(2022, 12, 1), "The Avengers", 20f);
-        Vorstellung v2 = new Vorstellung(kinoSaal, Zeitfenster.ABEND , LocalDate.of(2022, 12, 2), "The Avengers", 20f);
-        Vorstellung v3 = new Vorstellung(kinoSaal, Zeitfenster.ABEND , LocalDate.of(2022, 12, 3), "The Avengers", 20f);
-        Vorstellung v4 = new Vorstellung(kinoSaal, Zeitfenster.ABEND , LocalDate.of(2022, 12, 4), "The Avengers", 20f);
-        try{
-            kinoVerwaltung.einplanenVorstellung(v1);
-            kinoVerwaltung.einplanenVorstellung(v2);
-            kinoVerwaltung.einplanenVorstellung(v3);
-            kinoVerwaltung.einplanenVorstellung(v4);
-        }catch (Exception e){
-            thrown = true;
-        }
-
-        assertFalse(thrown);
+        //vorstellung = new Vorstellung(kinoSaal, Zeitfenster.ABEND , LocalDate.now(), "The Avengers", 20f);
+        //assertEquals();
+        List<Vorstellung> vorstellungen = kinoVerwaltung.getVorstellungen();
+        assertTrue(vorstellungen.get(0).equals(vorstellung));
 
     }
 
